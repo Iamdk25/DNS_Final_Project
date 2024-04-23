@@ -5,6 +5,7 @@
 #include <algorithm> // For binary_search
 #include <sstream> // For parsing CSV lines
 #include <limits>
+#include <queue> // Include the queue header
 
 using namespace std;
 
@@ -30,7 +31,11 @@ public:
     void setLocation(const string& newLocation) { location = newLocation; }
 
     string getDate() const { return date; }
-    void setDate(const string& newDate) { date = newDate; }    
+    void setDate(const string& newDate) { date = newDate; }
+
+    bool operator<(const Offense& other) const {
+        return offenseSeverity > other.offenseSeverity; // Descending order priority
+    }
     
 private:
     string studentUID;
@@ -69,7 +74,7 @@ int binarySearch(const vector<Offense>& records, const string& targetUID) {
 }
 
 
-void addData(vector<Offense>& offenseRecords) {
+void addData(vector<Offense>& offenseRecords, priority_queue<Offense>& severityQueue) {
     // Data Entry
     Offense newOffense;
     string temp;
@@ -109,6 +114,10 @@ void addData(vector<Offense>& offenseRecords) {
     }
     csvFileOut.close();
 
+    // Add to priority queue
+    severityQueue.push(newOffense); 
+
+
     cout << "New offense record added!" << endl; 
 }
 
@@ -136,6 +145,7 @@ void searchByUID(const vector<Offense>& offenseRecords) {
 
 int main() {
     vector<Offense> offenseRecords;
+    priority_queue<Offense> severityQueue; 
 
     // Load any existing offenses from your CSV
     // CSV Loading 
@@ -163,6 +173,7 @@ int main() {
             offense.setDate(temp);
 
             offenseRecords.push_back(offense);
+            severityQueue.push(offense); // Add to priority queue as well
         }
         csvFileIn.close();
     } else {
@@ -176,19 +187,32 @@ int main() {
         cout << "\nAutomated Offense Tracking System\n";
         cout << "1. Add Data\n";
         cout << "2. Search Data\n";
-        cout << "3. Exit\n";
+        cout << "3. Display top 3 offenses\n";
+        cout << "4. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
         cin.ignore(std::numeric_limits<streamsize>::max(), '\n'); // Consume the newline character
 
         switch (choice) {
             case 1: 
-                addData(offenseRecords);
+                addData(offenseRecords, severityQueue);
                 break;
             case 2:
                 searchByUID(offenseRecords);
                 break;
             case 3:
+                if (severityQueue.size() >= 3) {
+                    cout << "\nTop 3 Most Severe Offenses:\n";
+                    for (int i = 0; i < 3; i++) {
+                        Offense current = severityQueue.top();
+                        cout << "UID: " << current.getStudentUID() << ", Severity: " << current.getOffenseSeverity() << endl; 
+                        severityQueue.pop(); 
+                    }
+                } else {
+                    cout << "Not enough offenses to display top 3.\n";
+                }
+                break;
+            case 4:
                 cout << "Exiting...\n";
                 break;
             default:
@@ -196,9 +220,6 @@ int main() {
                 break;
         }
     } while (choice != 3); 
-
-
-
 
 
     return 0;
