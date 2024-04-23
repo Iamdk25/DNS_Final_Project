@@ -6,6 +6,8 @@
 #include <sstream> // For parsing CSV lines
 #include <limits>
 #include <queue> // Include the queue header
+#include <map>
+
 
 using namespace std;
 
@@ -34,7 +36,7 @@ public:
     void setDate(const string& newDate) { date = newDate; }
 
     bool operator<(const Offense& other) const {
-        return offenseSeverity > other.offenseSeverity; // Descending order priority
+        return offenseSeverity < other.offenseSeverity; // Descending order priority
     }
     
 private:
@@ -74,7 +76,7 @@ int binarySearch(const vector<Offense>& records, const string& targetUID) {
 }
 
 
-void addData(vector<Offense>& offenseRecords, priority_queue<Offense>& severityQueue) {
+void addData(vector<Offense>& offenseRecords, map<string, vector<Offense>>& offensesByUID, priority_queue<Offense>& severityQueue) {
     // Data Entry
     Offense newOffense;
     string temp;
@@ -114,6 +116,9 @@ void addData(vector<Offense>& offenseRecords, priority_queue<Offense>& severityQ
     }
     csvFileOut.close();
 
+    // Add to map
+    offensesByUID[newOffense.getStudentUID()].push_back(newOffense); 
+
     // Add to priority queue
     severityQueue.push(newOffense); 
 
@@ -121,31 +126,57 @@ void addData(vector<Offense>& offenseRecords, priority_queue<Offense>& severityQ
     cout << "New offense record added!" << endl; 
 }
 
-void searchByUID(const vector<Offense>& offenseRecords) {
+
+
+void searchByUID(const map<string, vector<Offense>>& offensesByUID) { 
     string targetUID;
     cout << "Enter Student UID to search: ";
     cin >> targetUID;
 
-    int index = binarySearch(offenseRecords, targetUID); 
+    auto it = offensesByUID.find(targetUID);
+    if (it != offensesByUID.end()) {
+        const vector<Offense>& offenses = it->second;
+        for (const Offense& offense : offenses) {
+            cout << "Student UID: " << offense.getStudentUID() << endl;
+            cout << "Name: " << offense.getName() << endl;
+            cout << "Age: " << offense.getAge() << endl;
+            cout << "Offense Type: " << offense.getOffenseType() << endl;
+            cout << "Offense Severity: " << offense.getOffenseSeverity() << endl;
+            cout << "Location: " << offense.getLocation() << endl;
+            cout << "Date: " << offense.getDate() << endl; // Assuming a suitable format for Date
+            cout << endl; // Spacing between offenses
+        }
 
-    if (index >= 0 && index < offenseRecords.size()) {
-        const Offense& foundOffense = offenseRecords[index]; 
-        // Display all the details of foundOffense 
-        cout << "Name: " << foundOffense.getName() << endl;
-        cout << "Age: " << foundOffense.getAge() << endl;
-        cout << "Offense Type: " << foundOffense.getOffenseType() << endl;
-        cout << "Offense Severity: " << foundOffense.getOffenseSeverity() << endl;
-        cout << "Location: " << foundOffense.getLocation() << endl;
-        cout << "Date: " << foundOffense.getDate() << endl;
     } else {
         cout << "Student UID not found.\n";
     }
 }
 
 
+void filterOffenses(const vector<Offense>& offenseRecords, int minAge, int maxAge) {
+    for (const Offense& offense : offenseRecords) {
+        if (offense.getAge() >= minAge && offense.getAge() <= maxAge) {
+            // Display offense details
+            cout << "Student UID: " << offense.getStudentUID() << endl;
+            cout << "Name: " << offense.getName() << endl;
+            cout << "Age: " << offense.getAge() << endl;
+            cout << "Offense Type: " << offense.getOffenseType() << endl;
+            cout << "Offense Severity: " << offense.getOffenseSeverity() << endl;
+            cout << "Location: " << offense.getLocation() << endl;
+            cout << "Date: " << offense.getDate() << endl; // Assuming a suitable format for Date
+            cout << endl; // Spacing between offenses
+            // ... Output rest of the offense information 
+        }
+    }
+}
+
+
+
+
 int main() {
     vector<Offense> offenseRecords;
-    priority_queue<Offense> severityQueue; 
+    priority_queue<Offense> severityQueue;
+    map<string, vector<Offense>> offensesByUID;
 
     // Load any existing offenses from your CSV
     // CSV Loading 
@@ -174,6 +205,8 @@ int main() {
 
             offenseRecords.push_back(offense);
             severityQueue.push(offense); // Add to priority queue as well
+            // Add to map
+            offensesByUID[offense.getStudentUID()].push_back(offense); 
         }
         csvFileIn.close();
     } else {
@@ -188,38 +221,52 @@ int main() {
         cout << "1. Add Data\n";
         cout << "2. Search Data\n";
         cout << "3. Display top 3 offenses\n";
-        cout << "4. Exit\n";
+        cout << "4. Filter offenses based on age range\n";
+        cout << "9. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
         cin.ignore(std::numeric_limits<streamsize>::max(), '\n'); // Consume the newline character
 
         switch (choice) {
             case 1: 
-                addData(offenseRecords, severityQueue);
+                addData(offenseRecords, offensesByUID, severityQueue);
                 break;
             case 2:
-                searchByUID(offenseRecords);
+                searchByUID(offensesByUID);
                 break;
             case 3:
                 if (severityQueue.size() >= 3) {
                     cout << "\nTop 3 Most Severe Offenses:\n";
                     for (int i = 0; i < 3; i++) {
                         Offense current = severityQueue.top();
-                        cout << "UID: " << current.getStudentUID() << ", Severity: " << current.getOffenseSeverity() << endl; 
+                        cout << "UID: " << current.getStudentUID() << ", Name: " << current.getName() << ", Severity: " << current.getOffenseSeverity() << endl; 
                         severityQueue.pop(); 
                     }
                 } else {
                     cout << "Not enough offenses to display top 3.\n";
                 }
                 break;
-            case 4:
+            case 4: // Filter option
+                cout << "Enter minimum age: ";
+                int minAge;
+                cin >> minAge;
+
+                cout << "Enter maximum age: ";
+                int maxAge;
+                cin >> maxAge;
+
+                filterOffenses(offenseRecords, minAge, maxAge);
+                break;
+
+            case 9:
                 cout << "Exiting...\n";
                 break;
+
             default:
                 cout << "Invalid choice. Please try again.\n";
                 break;
         }
-    } while (choice != 3); 
+    } while (choice != 9); 
 
 
     return 0;
