@@ -4,8 +4,6 @@ Submitted by: **Sujith Palanivasagam, Ninad Deshpande, Divyarajsinh Karmariya**
 
 **Parking & Offense Management System** is a project to manage, and keep track of all the final parking citation appeals that come to the USF Student Government Supreme Court. The USF Student Government Supreme Court deals with all final appeals for on-campus parking citations for students from PATS (Parking And Transportation Services). Currently, they do not have a method of looking through past offenders' lists and determining if a student has been in front of them before or not. Since one of our team members works in the department, we have used his experience to realistically create a program that will be used in real life from next semester...most probably after a few more updates to the program's functionality. This project aims to solve this problem by creating a system to manage all this data efficiently, using concepts that we learned from our Data Structures class.
 
-**MAC REQUIRES A SPACE BETWEEN TWO RIGHT ANGLE(>) BRACKETS WHILE WINDOWS DOES NOT. BUT WINDOWS CAN WORK WITH THE SPACE TOO!, HENCE WE HAVE ADDED A SPACE BETWEEN ALL CONSECUTIVE '>' TO ENSURE THAT THE CODE RUNS ON BOTH, WINDOWS, AND MAC OS.
-
 
 ## Required Features
 
