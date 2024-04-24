@@ -1,7 +1,154 @@
-U023,Zuck,34,Hit,3,USF,4/24/24
-U0456,Mark,34,Park,2,USF,4/24/24
-U0981,John,32,Hit,3,Collins,4/24/24
-U099,Ninad,91,Speeed,2,Beard,4/23/24
-U111,DK,20,Hit,3,Beard,4/23/24
-U1234,Suj,18,Park,1,Collins,4/24/24
-U987,Smith,32,Park,1,Beard,4/12/24
+U01234504, Sarah Hernandez,44, Double parking,60, LOT 60,7/23/2024
+U01234514, Sarah Wilson,31, Parking in loading zone,80, LOT 70,8/2/2024
+U01234524, Emily Davis,33, Blocking driveway,70, LOT 80,8/12/2024
+U01234534, Emily Young,37, Parked in reserved spot,90, LOT 90,8/22/2024
+U01234534, Jennifer Garcia,28, Parking violation,50, LOT 100,9/1/2024
+U01234567, Jennifer Thompson,27, Parking violation,50, LOT 10,6/3/2024
+U01234574, Matthew Rodriguez,29, Parking in fire lane,100, LOT 30,6/23/2024
+U01234576, Christopher Lewis,32, No parking permit,75, LOT 20,6/13/2024
+U01234584, Michael Miller,24, Expired meter,30, LOT 40,7/3/2024
+U01234594, Jessica Brown,39, Parking in handicapped space,150, LOT 50,7/13/2024
+U12345605, Daniel Hernandez,44, Double parking,60, LOT 51,7/14/2024
+U12345615, Michael Wilson,31, Parking in loading zone,80, LOT 61,7/24/2024
+U12345625, Michael Davis,33, Blocking driveway,70, LOT 71,8/3/2024
+U12345635, Matthew Young,37, Parked in reserved spot,90, LOT 81,8/13/2024
+U12345645, Christopher Garcia,28, Parking violation,50, LOT 91,8/23/2024
+U12345672, Vanessa Brown,31, Parking violation,50, LOT 01,5/25/2024
+U12345673, Brittany Lopez,30, Parking violation,50, LOT 01,5/16/2024
+U12345674, Zachary Hall,29, Parking violation,50, LOT 01,5/7/2024
+U12345675, Lauren Green,28, Parking violation,50, LOT 01,4/28/2024
+U12345676, James Clark,27, Parking violation,50, LOT 01,4/19/2024
+U12345677, Jennifer Martinez,26, Parking violation,50, LOT 01,4/10/2024
+U12345678, John Smith,25, Parking violation,50, LOT 01,4/1/2024
+U12345678, Michael Anderson,32, No parking permit,75, LOT 11,6/4/2024
+U12345685, Emily Brown,24, Expired meter,30, LOT 31,6/24/2024
+U12345687, Samantha Martinez,29, Parking in fire lane,100, LOT 21,6/14/2024
+U12345695, Jessica Wilson,39, Parking in handicapped space,150, LOT 41,7/4/2024
+U23456706, Amanda Brown,44, Double parking,60, LOT 42,7/5/2024
+U23456716, Sarah Wilson,31, Parking in loading zone,80, LOT 52,7/15/2024
+U23456726, Emily Davis,33, Blocking driveway,70, LOT 62,7/25/2024
+U23456736, Emily Young,37, Parked in reserved spot,90, LOT 72,8/4/2024
+U23456746, Jennifer Garcia,28, Parking violation,50, LOT 82,8/14/2024
+U23456756, Amanda Hernandez,32, No parking permit,75, LOT 92,8/24/2024
+U23456783, Patrick Allen,36, No parking permit,75, LOT 02,5/26/2024
+U23456784, Kevin Taylor,35, No parking permit,75, LOT 02,5/17/2024
+U23456785, Stephanie Scott,34, No parking permit,75, LOT 02,5/8/2024
+U23456786, Jonathan Wright,33, No parking permit,75, LOT 02,4/29/2024
+U23456787, Elizabeth Lewis,32, No parking permit,75, LOT 02,4/20/2024
+U23456788, David Anderson,31, No parking permit,75, LOT 02,4/11/2024
+U23456789, Emily Johnson,30, No parking permit,75, LOT 02,4/2/2024
+U23456789, Jessica Garcia,29, Parking in fire lane,100, LOT 12,6/5/2024
+U23456796, Joshua Davis,39, Parking in handicapped space,150, LOT 32,6/25/2024
+U23456798, Daniel Thompson,24, Expired meter,30, LOT 22,6/15/2024
+U34567807, Sarah Hernandez,44, Double parking,60, LOT 33,6/26/2024
+U34567809, Elizabeth Rodriguez,39, Parking in handicapped space,150, LOT 23,6/16/2024
+U34567817, Matthew Rodriguez,31, Parking in loading zone,80, LOT 43,7/6/2024
+U34567827, Michael Davis,33, Blocking driveway,70, LOT 53,7/16/2024
+U34567837, Matthew Young,37, Parked in reserved spot,90, LOT 63,7/26/2024
+U34567847, Christopher Garcia,28, Parking violation,50, LOT 73,8/5/2024
+U34567857, David Hernandez,32, No parking permit,75, LOT 83,8/15/2024
+U34567867, Matthew Martinez,29, Parking in fire lane,100, LOT 93,8/25/2024
+U34567890, Michael Williams,28, Parking in fire lane,100, LOT 03,4/3/2024
+U34567890, David Martinez,24, Expired meter,30, LOT 13,6/6/2024
+U34567894, Rachel Martinez,33, Parking in fire lane,100, LOT 03,5/27/2024
+U34567895, Nicole Clark,32, Parking in fire lane,100, LOT 03,5/18/2024
+U34567896, Michael Rodriguez,31, Parking in fire lane,100, LOT 03,5/9/2024
+U34567897, Amanda Taylor,30, Parking in fire lane,100, LOT 03,4/30/2024
+U34567898, Christopher Martinez,29, Parking in fire lane,100, LOT 03,4/21/2024
+U34567899, Samantha Taylor,28, Parking in fire lane,100, LOT 03,4/12/2024
+U45678900, Andrew Wilson,23, Expired meter,30, LOT 04,4/13/2024
+U45678901, Jessica Jones,22, Expired meter,30, LOT 04,4/4/2024
+U45678901, Ashley Brown,39, Parking in handicapped space,150, LOT 14,6/7/2024
+U45678905, Amanda Rodriguez,28, Expired meter,30, LOT 04,5/28/2024
+U45678906, Justin Rodriguez,27, Expired meter,30, LOT 04,5/19/2024
+U45678907, Heather Martinez,26, Expired meter,30, LOT 04,5/10/2024
+U45678908, Brandon Brown,25, Expired meter,30, LOT 04,5/1/2024
+U45678909, Jessica Robinson,24, Expired meter,30, LOT 04,4/22/2024
+U45678910, Michael White,44, Double parking,60, LOT 24,6/17/2024
+U45678918, Daniel Wilson,31, Parking in loading zone,80, LOT 34,6/27/2024
+U45678928, Emily Hernandez,33, Blocking driveway,70, LOT 44,7/7/2024
+U45678938, Emily Young,37, Parked in reserved spot,90, LOT 54,7/17/2024
+U45678948, Jennifer Garcia,28, Parking violation,50, LOT 64,7/27/2024
+U45678958, Amanda Hernandez,32, No parking permit,75, LOT 74,8/6/2024
+U45678968, Ashley Martinez,29, Parking in fire lane,100, LOT 84,8/16/2024
+U45678978, Jessica Thompson,24, Expired meter,30, LOT 94,8/26/2024
+U56789010, Ryan Walker,37, Parking in handicapped space,150, LOT 05,4/23/2024
+U56789011, Melissa Garcia,36, Parking in handicapped space,150, LOT 05,4/14/2024
+U56789012, Christopher Brown,35, Parking in handicapped space,150, LOT 05,4/5/2024
+U56789012, Amanda Hernandez,44, Double parking,60, LOT 15,6/8/2024
+U56789016, Kyle Moore,41, Parking in handicapped space,150, LOT 05,5/29/2024
+U56789017, Rachel Hill,40, Parking in handicapped space,150, LOT 05,5/20/2024
+U56789018, Tyler Lee,39, Parking in handicapped space,150, LOT 05,5/11/2024
+U56789019, Samantha Thompson,38, Parking in handicapped space,150, LOT 05,5/2/2024
+U56789021, Jessica Miller,31, Parking in loading zone,80, LOT 25,6/18/2024
+U56789029, Amanda Taylor,33, Blocking driveway,70, LOT 35,6/28/2024
+U56789039, Daniel Young,37, Parked in reserved spot,90, LOT 45,7/8/2024
+U56789049, Christopher Garcia,28, Parking violation,50, LOT 55,7/18/2024
+U56789059, David Hernandez,32, No parking permit,75, LOT 65,7/28/2024
+U56789069, Matthew Martinez,29, Parking in fire lane,100, LOT 75,8/7/2024
+U56789079, Michael Thompson,24, Expired meter,30, LOT 85,8/17/2024
+U56789089, Daniel Brown,39, Parking in handicapped space,150, LOT 95,8/27/2024
+U67890120, Eric Perez,43, Double parking,60, LOT 06,5/3/2024
+U67890121, Amanda Hernandez,42, Double parking,60, LOT 06,4/24/2024
+U67890122, Justin Rodriguez,41, Double parking,60, LOT 06,4/15/2024
+U67890123, Amanda Davis,40, Double parking,60, LOT 06,4/6/2024
+U67890123, Matthew Wilson,31, Parking in loading zone,80, LOT 16,6/9/2024
+U67890127, Chelsea Young,46, Double parking,60, LOT 06,5/30/2024
+U67890128, Megan Gonzalez,45, Double parking,60, LOT 06,5/21/2024
+U67890129, Christina Gonzalez,44, Double parking,60, LOT 06,5/12/2024
+U67890132, David Wilson,33, Blocking driveway,70, LOT 26,6/19/2024
+U67890140, Matthew Young,37, Parked in reserved spot,90, LOT 36,6/29/2024
+U67890150, Sarah Davis,28, Parking violation,50, LOT 46,7/9/2024
+U67890160, Amanda Hernandez,32, No parking permit,75, LOT 56,7/19/2024
+U67890170, Ashley Martinez,29, Parking in fire lane,100, LOT 66,7/29/2024
+U67890180, Jessica Thompson,24, Expired meter,30, LOT 76,8/8/2024
+U67890190, Jessica Brown,39, Parking in handicapped space,150, LOT 86,8/18/2024
+U67890190, Sarah Hernandez,44, Double parking,60, LOT 96,8/28/2024
+U78901201, Daniel Hernandez,44, Double parking,60, LOT 87,8/19/2024
+U78901201, Michael Wilson,31, Parking in loading zone,80, LOT 97,8/29/2024
+U78901230, Benjamin Wright,31, Parking in loading zone,80, LOT 07,5/13/2024
+U78901231, Kimberly Roberts,30, Parking in loading zone,80, LOT 07,5/4/2024
+U78901232, Daniel Young,29, Parking in loading zone,80, LOT 07,4/25/2024
+U78901233, Olivia Lopez,28, Parking in loading zone,80, LOT 07,4/16/2024
+U78901234, Daniel Miller,27, Parking in loading zone,80, LOT 07,4/7/2024
+U78901234, Emily Taylor,33, Blocking driveway,70, LOT 17,6/10/2024
+U78901238, Jason Hill,33, Parking in loading zone,80, LOT 07,5/31/2024
+U78901239, Nicholas Adams,32, Parking in loading zone,80, LOT 07,5/22/2024
+U78901243, Rachel Johnson,37, Parked in reserved spot,90, LOT 27,6/20/2024
+U78901251, Jennifer Garcia,28, Parking violation,50, LOT 37,6/30/2024
+U78901261, Christopher Taylor,32, No parking permit,75, LOT 47,7/10/2024
+U78901271, Matthew Martinez,29, Parking in fire lane,100, LOT 57,7/20/2024
+U78901281, Michael Thompson,24, Expired meter,30, LOT 67,7/30/2024
+U78901291, Daniel Brown,39, Parking in handicapped space,150, LOT 77,8/9/2024
+U89012302, Sarah Hernandez,44, Double parking,60, LOT 78,8/10/2024
+U89012312, Sarah Wilson,31, Parking in loading zone,80, LOT 88,8/20/2024
+U89012312, Emily Davis,33, Blocking driveway,70, LOT 98,8/30/2024
+U89012340, Amber Nelson,34, Blocking driveway,70, LOT 08,5/23/2024
+U89012341, Kimberly Martinez,33, Blocking driveway,70, LOT 08,5/14/2024
+U89012342, Joshua Adams,32, Blocking driveway,70, LOT 08,5/5/2024
+U89012343, Sarah King,31, Blocking driveway,70, LOT 08,4/26/2024
+U89012344, William Lee,30, Blocking driveway,70, LOT 08,4/17/2024
+U89012345, Sarah Wilson,29, Blocking driveway,70, LOT 08,4/8/2024
+U89012345, Daniel Young,37, Parked in reserved spot,90, LOT 18,6/11/2024
+U89012349, Maria King,35, Blocking driveway,70, LOT 08,6/1/2024
+U89012354, Christopher Harris,28, Parking violation,50, LOT 28,6/21/2024
+U89012362, David Hernandez,32, No parking permit,75, LOT 38,7/1/2024
+U89012372, Amanda Martinez,29, Parking in fire lane,100, LOT 48,7/11/2024
+U89012382, Jessica Thompson,24, Expired meter,30, LOT 58,7/21/2024
+U89012392, Jessica Brown,39, Parking in handicapped space,150, LOT 68,7/31/2024
+U90123403, Daniel Hernandez,44, Double parking,60, LOT 69,8/1/2024
+U90123413, Michael Wilson,31, Parking in loading zone,80, LOT 79,8/11/2024
+U90123423, Michael Davis,33, Blocking driveway,70, LOT 89,8/21/2024
+U90123423, Matthew Young,37, Parked in reserved spot,90, LOT 99,8/31/2024
+U90123450, Cody Baker,39, Parked in reserved spot,90, LOT 09,6/2/2024
+U90123451, Cody Lewis,38, Parked in reserved spot,90, LOT 09,5/24/2024
+U90123452, David Johnson,37, Parked in reserved spot,90, LOT 09,5/15/2024
+U90123453, Amanda White,36, Parked in reserved spot,90, LOT 09,5/6/2024
+U90123454, Matthew Nelson,35, Parked in reserved spot,90, LOT 09,4/27/2024
+U90123455, Ashley Harris,34, Parked in reserved spot,90, LOT 09,4/18/2024
+U90123456, Matthew Moore,33, Parked in reserved spot,90, LOT 09,4/9/2024
+U90123456, Sarah Davis,28, Parking violation,50, LOT 19,6/12/2024
+U90123465, Amanda Thompson,32, No parking permit,75, LOT 29,6/22/2024
+U90123473, Ashley Thompson,29, Parking in fire lane,100, LOT 39,7/2/2024
+U90123483, Matthew Thompson,24, Expired meter,30, LOT 49,7/12/2024
+U90123493, Daniel Brown,39, Parking in handicapped space,150, LOT 59,7/22/2024
