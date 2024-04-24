@@ -1,4 +1,4 @@
-# Final Project  - *Parking & Offense Management System *
+# Final Project  - **Parking & Offense Management System **
 
 Submitted by: **Sujith Palanivasagam, Ninad Deshpande, Divyarajsinh Karmariya**
 
