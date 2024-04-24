@@ -166,6 +166,8 @@ void filterOffenses(const vector<Offense>& offenseRecords, int minAge, int maxAg
             cout << "Date: " << offense.getDate() << endl; // Assuming a suitable format for Date
             cout << endl; // Spacing between offenses
             // ... Output rest of the offense information 
+        } else{
+            cout << "None found in the range." << endl;
         }
     }
 }
