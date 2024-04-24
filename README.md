@@ -10,9 +10,9 @@ Submitted by: **Sujith Palanivasagam, Ninad Deshpande, Divyarajsinh Karmariya**
 The following **required** functionality is completed:
 
 - [ ] User can Insert Offense and Offender information while answering prompts from the system.
-- [ ] User can Search up a violator or offendor using their U Number.
-- [ ] All the information the the user provides is stored in a csv database and is sorted using Insertion Sort.
-- [ ] Priority Queues have been implemented to find the top 3 highest parking or road offenses commited by a person.
+- [ ] Users can search for a violator or offender using their U Number.
+- [ ] All the information the user provides is stored in a .csv database and is sorted using Insertion Sort.
+- [ ] Priority Queues have been implemented to find the top 3 highest parking or road offenses committed by a person.
 - [ ] Vector has been implemented to filter offenses based on the age range of the offenders.
 
 
@@ -21,7 +21,7 @@ The following **required** functionality is completed:
 - [ ] A main.exe file will be generated which will access the csv file.
 - [ ] There should be atleast 1 blank csv(offense_data.csv) present in the same folder as the main file.
 - [ ] A prompt will ask the user to select the operation one wants to perform with the Automated Offense Tracking System
-- [ ] You can Add data, Search data, Display the top 3 offenses, Filter offenses based on age range and exit the code
+- [ ] You can Add data, Search data, Display the top 3 offenses, Filter offenses based on age range, and exit the code
  
 
 ## Thank you
