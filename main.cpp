@@ -172,9 +172,7 @@ void filterOffenses(const vector<Offense>& offenseRecords, int minAge, int maxAg
             cout << "Date: " << offense.getDate() << endl;
             cout << endl; // Spacing between offenses
         }
-    }
-    // If no offenses found in the specified age range
-    cout << "None found in the range." << endl;
+   }
 }
 
 
@@ -275,4 +273,3 @@ int main() {
 
     return 0;
 }
-
