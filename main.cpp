@@ -92,7 +92,7 @@ void addData(vector<Offense>& offenseRecords, map<string, vector<Offense>>& offe
     cout << "Enter Offense Type: ";
     getline(cin, temp);
     newOffense.setOffenseType(temp);
-    cout << "Enter Offense _amount: ";
+    cout << "Enter Offense Amount: ";
     getline(cin, temp);
     newOffense.setOffense_amount(stoi(temp));
     cout << "Enter Location: ";
