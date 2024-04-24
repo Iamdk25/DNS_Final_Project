@@ -17,11 +17,11 @@ The following **required** functionality is completed:
 
 
 ## Instructions to run the code
--Use * g++ main.cpp -o main * to run the file.
--A main.exe file will be generated which will access the csv file.
--There should be atleast 1 blank csv(offense_data.csv) present in the same folder as the main file.
--A prompt will ask the user to select the operation one wants to perform with the Automated Offense Tracking System
--You can Add data, Search data, Display the top 3 offenses, Filter offenses based on age range and exit the code
+- [ ] Use * g++ main.cpp -o main * to run the file.
+- [ ] A main.exe file will be generated which will access the csv file.
+- [ ] There should be atleast 1 blank csv(offense_data.csv) present in the same folder as the main file.
+- [ ] A prompt will ask the user to select the operation one wants to perform with the Automated Offense Tracking System
+- [ ] You can Add data, Search data, Display the top 3 offenses, Filter offenses based on age range and exit the code
  
 
 ## Thank you
