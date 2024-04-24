@@ -24,4 +24,4 @@ The following **required** functionality is completed:
 - [ ] You can Add data, Search data, Display the top 3 offenses, Filter offenses based on age range, and exit the code
  
 
-## Thank you
+### Thank you
