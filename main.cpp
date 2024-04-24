@@ -26,8 +26,8 @@ public:
     string getOffenseType() const { return offenseType; }
     void setOffenseType(const string& newType) { offenseType = newType; }
 
-    int getOffense_amount() const { return offense_amount; }
-    void setOffense_amount(int new_amount) { offense_amount = new_amount; }
+    int getOffenseAmount() const { return offenseAmount; }
+    void setOffenseAmount(int newAmount) { offenseAmount = newAmount; }
 
     string getLocation() const { return location; }
     void setLocation(const string& newLocation) { location = newLocation; }
@@ -36,7 +36,7 @@ public:
     void setDate(const string& newDate) { date = newDate; }
 
     bool operator<(const Offense& other) const {
-        return offense_amount < other.offense_amount; // Descending order priority
+        return offenseAmount < other.offenseAmount; // Descending order priority
     }
     
 private:
@@ -44,7 +44,7 @@ private:
     string name;
     int age;
     string offenseType;
-    int offense_amount; 
+    int offenseAmount; 
     string location;
     string date; 
 };    
@@ -76,7 +76,7 @@ int binarySearch(const vector<Offense>& records, const string& targetUID) {
 }
 
 
-void addData(vector<Offense>& offenseRecords, map<string, vector<Offense>>& offensesByUID, priority_queue<Offense>& _amountQueue) {
+void addData(vector<Offense>& offenseRecords, map<string, vector<Offense> >& offensesByUID, priority_queue<Offense>& amountQueue) {
     // Data Entry
     Offense newOffense;
     string temp;
@@ -94,7 +94,7 @@ void addData(vector<Offense>& offenseRecords, map<string, vector<Offense>>& offe
     newOffense.setOffenseType(temp);
     cout << "Enter Offense Amount: ";
     getline(cin, temp);
-    newOffense.setOffense_amount(stoi(temp));
+    newOffense.setOffenseAmount(stoi(temp));
     cout << "Enter Location: ";
     getline(cin, temp);
     newOffense.setLocation(temp);
@@ -111,7 +111,7 @@ void addData(vector<Offense>& offenseRecords, map<string, vector<Offense>>& offe
     for (const Offense& offense : offenseRecords) {
         csvFileOut << offense.getStudentUID() << "," << offense.getName() << "," 
                 << offense.getAge() << "," << offense.getOffenseType() << ","
-                << offense.getOffense_amount() << "," << offense.getLocation() << ","
+                << offense.getOffenseAmount() << "," << offense.getLocation() << ","
                 << offense.getDate() << endl; 
     }
     csvFileOut.close();
@@ -120,7 +120,7 @@ void addData(vector<Offense>& offenseRecords, map<string, vector<Offense>>& offe
     offensesByUID[newOffense.getStudentUID()].push_back(newOffense); 
 
     // Add to priority queue
-    _amountQueue.push(newOffense); 
+    amountQueue.push(newOffense); 
 
 
     cout << "New offense record added!" << endl; 
@@ -128,7 +128,7 @@ void addData(vector<Offense>& offenseRecords, map<string, vector<Offense>>& offe
 
 
 
-void searchByUID(const map<string, vector<Offense>>& offensesByUID) { 
+void searchByUID(const map<string, vector<Offense> >& offensesByUID) { 
     string targetUID;
     cout << "Enter Student UID to search: ";
     cin >> targetUID;
@@ -141,7 +141,7 @@ void searchByUID(const map<string, vector<Offense>>& offensesByUID) {
             cout << "Name: " << offense.getName() << endl;
             cout << "Age: " << offense.getAge() << endl;
             cout << "Offense Type: " << offense.getOffenseType() << endl;
-            cout << "Offense Amount: " << offense.getOffense_amount() << endl;
+            cout << "Offense Amount: " << offense.getOffenseAmount() << endl;
             cout << "Location: " << offense.getLocation() << endl;
             cout << "Date: " << offense.getDate() << endl; // Assuming a suitable format for Date
             cout << endl; // Spacing between offenses
@@ -161,11 +161,10 @@ void filterOffenses(const vector<Offense>& offenseRecords, int minAge, int maxAg
             cout << "Name: " << offense.getName() << endl;
             cout << "Age: " << offense.getAge() << endl;
             cout << "Offense Type: " << offense.getOffenseType() << endl;
-            cout << "Offense _amount: " << offense.getOffense_amount() << endl;
+            cout << "Offense Amount: " << offense.getOffenseAmount() << endl;
             cout << "Location: " << offense.getLocation() << endl;
             cout << "Date: " << offense.getDate() << endl; // Assuming a suitable format for Date
             cout << endl; // Spacing between offenses
-            // ... Output rest of the offense information 
         } else{
             cout << "None found in the range." << endl;
         }
@@ -177,8 +176,8 @@ void filterOffenses(const vector<Offense>& offenseRecords, int minAge, int maxAg
 
 int main() {
     vector<Offense> offenseRecords;
-    priority_queue<Offense> _amountQueue;
-    map<string, vector<Offense>> offensesByUID;
+    priority_queue<Offense> amountQueue;
+    map<string, vector<Offense> > offensesByUID;
 
     // Load any existing offenses from your CSV
     // CSV Loading 
@@ -199,14 +198,14 @@ int main() {
             getline(ss, temp, ',');
             offense.setOffenseType(temp);
             getline(ss, temp, ',');
-            offense.setOffense_amount(stoi(temp));
+            offense.setOffenseAmount(stoi(temp));
             getline(ss, temp, ',');
             offense.setLocation(temp);
             getline(ss, temp, ',');
             offense.setDate(temp);
 
             offenseRecords.push_back(offense);
-            _amountQueue.push(offense); // Add to priority queue as well
+            amountQueue.push(offense); // Add to priority queue as well
             // Add to map
             offensesByUID[offense.getStudentUID()].push_back(offense); 
         }
@@ -231,18 +230,18 @@ int main() {
 
         switch (choice) {
             case 1: 
-                addData(offenseRecords, offensesByUID, _amountQueue);
+                addData(offenseRecords, offensesByUID, amountQueue);
                 break;
             case 2:
                 searchByUID(offensesByUID);
                 break;
             case 3:
-                if (_amountQueue.size() >= 3) {
+                if (amountQueue.size() >= 3) {
                     cout << "\nTop 3 Most Severe Offenses:\n";
                     for (int i = 0; i < 3; i++) {
-                        Offense current = _amountQueue.top();
-                        cout << "UID: " << current.getStudentUID() << ", Name: " << current.getName() << ", _amount: " << current.getOffense_amount() << endl; 
-                        _amountQueue.pop(); 
+                        Offense current = amountQueue.top();
+                        cout << "UID: " << current.getStudentUID() << ", Name: " << current.getName() << ", _amount: " << current.getOffenseAmount() << endl; 
+                        amountQueue.pop(); 
                     }
                 } else {
                     cout << "Not enough offenses to display top 3.\n";
